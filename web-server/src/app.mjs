@@ -8,6 +8,7 @@ const publicPath = path.join(pathDir,'public')
 const viewsPath = path.join(pathDir,'templates/views')
 const partialsPath = path.join(pathDir,'templates/partials')
 
+const port =process.env.PORT||3001
 const URL='https://restapi.amap.com/v3/weather/weatherInfo?key=a00ae064493f775885f1205b050618c3&&city=510100'
 
 
@@ -82,6 +83,6 @@ app.get('*', (req, res) => {
         errorMessage: 'Page not found.'
     })
 })
-app.listen(3001,()=>{
+app.listen(port,()=>{
     console.log('server is up')
 })
